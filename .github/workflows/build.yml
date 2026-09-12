@@ -10,6 +10,7 @@ jobs:
           node-version: 20
       - run: npm install --legacy-peer-deps
       - run: npm run build
+      - run: mkdir -p dist
       - run: npm install @capacitor/core @capacitor/cli @capacitor/android
       - run: npx cap init AttendIQ com.app.attendiq --web-dir=dist
       - run: npx cap add android
